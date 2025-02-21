@@ -38,19 +38,24 @@
 data "aws_lb_target_group" "target_group" {
   name = "demo-tg"
 }
-
+data "aws_lb_target_group" "target_group" {
+  name = "argocd-tg"
+}
+data "aws_lb_target_group" "target_group" {
+  name = "grafana-tg"
+}
 # Data source to get ALB by name
 data "aws_lb" "alb" {
   name = "dev-jurist-blueops-alb" 
 }
-data "aws_vpc" "main" {
-  default = true
-}
+# data "aws_vpc" "main" {
+#   default = true
+# }
 # data "aws_acm_certificate" "domain_cert" {
 #     domain = var.domain_name
 #     most_recent = true
 #     statuses   = ["ISSUED"]
 # }
-data "aws_security_group" "sg" {
- name = "jurist"
-}
+# data "aws_security_group" "sg" {
+#  name = "jurist"
+# }
