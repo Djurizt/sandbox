@@ -1,0 +1,64 @@
+region: us-east-1
+metrics:
+  - aws_namespace: AWS/RDS
+    aws_metric_name: CPUUtilization
+    dimensions: [DBInstanceIdentifier]
+    dimension_select:
+      DBInstanceIdentifier:
+        - database-1
+    statistics: [Average]
+    period_seconds: 60
+
+  - aws_namespace: AWS/RDS
+    aws_metric_name: DatabaseConnections
+    dimensions: [DBInstanceIdentifier]
+    dimension_select:
+      DBInstanceIdentifier:
+        - database-1
+    statistics: [Average]
+    period_seconds: 60
+
+  - aws_namespace: AWS/RDS
+    aws_metric_name: FreeableMemory
+    dimensions: [DBInstanceIdentifier]
+    dimension_select:
+      DBInstanceIdentifier:
+        - database-1
+    statistics: [Average]
+    period_seconds: 60
+
+  - aws_namespace: AWS/RDS
+    aws_metric_name: ReadLatency
+    dimensions: [DBInstanceIdentifier]
+    dimension_select:
+      DBInstanceIdentifier:
+        - database-1
+    statistics: [Average]
+    period_seconds: 60
+
+  - aws_namespace: AWS/RDS
+    aws_metric_name: WriteLatency
+    dimensions: [DBInstanceIdentifier]
+    dimension_select:
+      DBInstanceIdentifier:
+        - database-1
+    statistics: [Average]
+    period_seconds: 60
+
+  - aws_namespace: AWS/RDS
+    aws_metric_name: NetworkReceiveThroughput
+    dimensions: [DBInstanceIdentifier]
+    dimension_select:
+      DBInstanceIdentifier:
+        - database-1
+    statistics: [Average]
+    period_seconds: 60
+
+  - aws_namespace: AWS/RDS
+    aws_metric_name: NetworkTransmitThroughput
+    dimensions: [DBInstanceIdentifier]
+    dimension_select:
+      DBInstanceIdentifier:
+        - database-1
+    statistics: [Average]
+    period_seconds: 60
