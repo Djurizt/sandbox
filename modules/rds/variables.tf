@@ -37,3 +37,42 @@ variable "common_tags" {
 variable "db_parameters" {
   type = map(any)
 }
+variable "max_storage" {
+  type        = number
+}
+# variable "rds_monitoring" {
+#   type        = string
+# }
+variable "backup_window" {
+  type        = string
+}
+variable "backup_retention_period" {
+  type        = number
+}
+variable "maintenance_window" {
+  type        = string
+}
+variable "performance_insights" {
+  type    = bool
+}
+variable "insights_retention_period" {
+  type        = number
+}
+variable "monitoring_interval" {
+  type        = number
+}
+variable "deletion_protection" {
+  type    = bool
+}
+variable "multi_az" {
+  type    = bool
+}
+variable "storage_type" {
+  type        = string
+}
+variable "allowed_cidrs" {
+  type        = list(string)
+}
+variable "apply_immediately" {
+  type    = bool
+}
