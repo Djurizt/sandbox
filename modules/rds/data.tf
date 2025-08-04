@@ -10,9 +10,9 @@ data "aws_vpc" "vpc" {
   # }
 }
 data "aws_secretsmanager_secret" "db_secrets" {
-  name     = "EKS_DB"
+  name = "EKS_DB"
 }
 
 data "aws_secretsmanager_secret_version" "db_secrets_versions" {
-  secret_id  = data.aws_secretsmanager_secret.db_secrets.id
+  secret_id = data.aws_secretsmanager_secret.db_secrets.id
 }
